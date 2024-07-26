@@ -1,5 +1,7 @@
 package calculator;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class App {
@@ -9,8 +11,7 @@ public class App {
 
         int[] intArray = new int[10]; // 크기가 10인 int 배열 생성
         int count = 0; // 인덱스를 표현하는 언어
-        int lastIndex = 0;
-
+//        int lastIndex = 0;
 
         while (true) {
             System.out.println("첫 번째 숫자를 입력하세요: ");
@@ -40,24 +41,27 @@ public class App {
 
             }
 
+
             System.out.println("결과: " + result);
 
-            System.out.println(intArray);
-            for (int i = 0 ; i < intArray.length; i++) {
-                System.out.println("저장값: " + intArray[i]);
-            }
 
 
-            if(lastIndex > intArray.length-1) { // 배열 위치가 9가 되었을때
-                for (int i = 0; i < intArray.length - 1; i++) { // 0~8까지 돌림
-                    intArray[i] = intArray[i + 1]; // 첫번째 배열에 두번째 배열 입력
-                }
-                intArray[intArray.length - 1] = result; // 마지막 배열에 결과값 입력
-            }
+//            if(lastIndex < intArray.length-1) { // 배열 위치가 9가 되었을때
+//                for (int i = 0; i < intArray.length - 1; i++) { // 0~8까지 돌림
+//                    intArray[i] = intArray[i + 1]; // 첫번째 배열에 두번째 배열 입력
+//                }
+//                intArray[intArray.length - 1] = result; // 마지막 배열에 결과값 입력
+//
+//            }
 
 
             count++;
             System.out.println("count: " + count);
+
+            Queue<Integer> intQueue = new LinkedList<>();
+            intQueue.add(intArray.length);
+            while (!intQueue.isEmpty())
+
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String exit = sc.next();
