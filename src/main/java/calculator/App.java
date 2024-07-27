@@ -1,8 +1,6 @@
 package calculator;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 public class App {
 
@@ -44,6 +42,7 @@ public class App {
 
             System.out.println("결과: " + result);
 
+            List<Integer> newArr = Arrays.asList(); // 배열을 컬렌션으로 변경
 
 
 //            if(lastIndex < intArray.length-1) { // 배열 위치가 9가 되었을때
@@ -58,10 +57,17 @@ public class App {
             count++;
             System.out.println("count: " + count);
 
-            Queue<Integer> intQueue = new LinkedList<>();
-            intQueue.add(intArray.length);
-            while (!intQueue.isEmpty())
+            Queue<Integer> intQueue = new LinkedList<>(); // Queue 선언
+            intQueue.add(intArray.length); // intArray 길이만큼 저장
+//            while (!intQueue.isEmpty())
+            intQueue.add(result); // 결과값 Queue로 저장
 
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+            String remove = sc.next();
+            if (remove.equals("remove")) {
+                System.out.println("가장 먼저 저장된 연산 결과가 삭제되었습니다.");
+            }
+            intQueue.remove(); // Queue의 첫번째 값 제거
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String exit = sc.next();
