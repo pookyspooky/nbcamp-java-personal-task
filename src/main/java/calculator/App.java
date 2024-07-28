@@ -9,7 +9,8 @@ public class App {
 
         int[] intArray = new int[10]; // 크기가 10인 int 배열 생성
         int count = 0; // 인덱스를 표현하는 언어
-//        int lastIndex = 0;
+        Queue<Integer> intQueue = new LinkedList<>(); // Queue 선언
+
 
         while (true) {
             System.out.println("첫 번째 숫자를 입력하세요: ");
@@ -42,7 +43,7 @@ public class App {
 
             System.out.println("결과: " + result);
 
-            List<Integer> newArr = Arrays.asList(); // 배열을 컬렌션으로 변경
+
 
 
 //            if(lastIndex < intArray.length-1) { // 배열 위치가 9가 되었을때
@@ -57,7 +58,7 @@ public class App {
             count++;
             System.out.println("count: " + count);
 
-            Queue<Integer> intQueue = new LinkedList<>(); // Queue 선언
+
             intQueue.add(intArray.length); // intArray 길이만큼 저장
 //            while (!intQueue.isEmpty())
             intQueue.add(result); // 결과값 Queue로 저장
@@ -68,6 +69,14 @@ public class App {
                 System.out.println("가장 먼저 저장된 연산 결과가 삭제되었습니다.");
             }
             intQueue.remove(); // Queue의 첫번째 값 제거
+
+            System.out.println("저장된 연살결과를 조회하시겠습니끼? (inquiry 입력 시 조회)");
+            String inquiry = sc.next();
+            if (inquiry.equals("inquiry")) {
+                for (int str : intQueue) {
+                    System.out.println("저장값: " + str);
+                }
+            }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String exit = sc.next();
