@@ -7,7 +7,7 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[] intArray = new int[10]; // 크기가 10인 int 배열 생성
+        int[] intArray = new int[0]; // 크기가 10인 int 배열 생성
         int count = 0; // 인덱스를 표현하는 언어
         Queue<Integer> intQueue = new LinkedList<>(); // Queue 선언
 
@@ -59,16 +59,15 @@ public class App {
             System.out.println("count: " + count);
 
 
-            intQueue.add(intArray.length); // intArray 길이만큼 저장
-//            while (!intQueue.isEmpty())
+
             intQueue.add(result); // 결과값 Queue로 저장
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             String remove = sc.next();
             if (remove.equals("remove")) {
+                intQueue.remove(); // Queue의 첫번째 값 제거
                 System.out.println("가장 먼저 저장된 연산 결과가 삭제되었습니다.");
             }
-            intQueue.remove(); // Queue의 첫번째 값 제거
 
             System.out.println("저장된 연살결과를 조회하시겠습니끼? (inquiry 입력 시 조회)");
             String inquiry = sc.next();
