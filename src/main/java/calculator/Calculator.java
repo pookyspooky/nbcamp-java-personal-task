@@ -48,9 +48,10 @@ public class Calculator {
         this.intQueue.remove();
         System.out.println("가장 먼저 저장된 연산 결과가 삭제되었습니다.");
     }
-
-    public Queue<Integer> getter() {
-        return this.intQueue;
+    public void inquiryResult() {
+            for (int str : intQueue) {
+                System.out.println("저장값: " + str);
+            }
     }
 }
 

@@ -35,10 +35,9 @@ public class App {
             System.out.println("저장된 연살결과를 조회하시겠습니끼? (inquiry 입력 시 조회)");
             String inquiry = sc.next();
             if (inquiry.equals("inquiry")) {
-                for (int str : calculator.getter()) {
-                    System.out.println("저장값: " + str);
+                calculator.inquiryResult();
                 }
-            }
+
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String exit = sc.next();
