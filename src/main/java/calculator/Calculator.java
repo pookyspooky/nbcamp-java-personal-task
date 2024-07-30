@@ -6,6 +6,7 @@ import java.util.Queue;
 public class Calculator {
     Queue<Integer> intQueue = new LinkedList<>();
 
+
     public int calculate(int num1, int num2, char operator) {
         int result = 0;
         if (operator == '+') {
@@ -27,6 +28,8 @@ public class Calculator {
             System.out.println("오류: 올바른 연산 기호를 입력하세요 (+, -, *, / 중 하나).");
 
         }
+        intQueue.add(result); // 결과값 Queue로 저장
+        System.out.println("결과: " + result);
         return result;
     }
 }
