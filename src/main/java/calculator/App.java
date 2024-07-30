@@ -29,8 +29,7 @@ public class App {
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             String remove = sc.next();
             if (remove.equals("remove")) {
-                calculator.getter().remove(); // Queue의 첫번째 값 제거
-                System.out.println("가장 먼저 저장된 연산 결과가 삭제되었습니다.");
+                calculator.removeResult(); // Queue의 첫번째 값 제거
             }
 
             System.out.println("저장된 연살결과를 조회하시겠습니끼? (inquiry 입력 시 조회)");
