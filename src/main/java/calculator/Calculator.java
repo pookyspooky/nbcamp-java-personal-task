@@ -7,7 +7,7 @@ public class Calculator {
     private Queue<Integer> intQueue = new LinkedList<>();
     private int num1;
     private int num2;
-    private char operater;
+    private char operator;
 
     public void setNum1 (int num1){
         this.num1 = num1;
@@ -15,10 +15,10 @@ public class Calculator {
     public void setNum2 (int num2){
         this.num2 = num2;
     }
-    public void setOperator (char operater) {
-        this.operater = operater;
+    public void setOperator (char operator) {
+        this.operator = operator;
     }
-    public int calculate(int num1, int num2, char operator) {
+    public int calculate() {
         int result = 0;
         if (operator == '+') {
             result = num1 + num2;

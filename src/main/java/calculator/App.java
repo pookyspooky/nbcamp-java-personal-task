@@ -12,16 +12,16 @@ public class App {
 
         while (true) {
             System.out.println("첫 번째 숫자를 입력하세요: ");
-            int Num1 = sc.nextInt();
-            calculator.setNum1(Num1);
+            int num1 = sc.nextInt();
+            calculator.setNum1(num1);
             System.out.println("사칙연산 기호를 입력하세요: "); // +, -, *, /
             char operator = sc.next().charAt(0);
             calculator.setOperator(operator);
             System.out.println("두 번째 숫자를 입력하세요: ");
-            int Num2 = sc.nextInt();
-            calculator.setNum2(Num2);
+            int num2 = sc.nextInt();
+            calculator.setNum2(num2);
 
-            calculator.calculate(Num1, Num2, operator);
+            calculator.calculate();
 
             count++;
             System.out.println("count: " + count);
