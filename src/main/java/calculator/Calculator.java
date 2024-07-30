@@ -4,7 +4,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Calculator {
-    private Queue<Integer> intQueue = new LinkedList<>();
+    public Calculator() {
+        intQueue = new LinkedList<>(); // 결과 저장 배열 초기화
+    }
+
+    private Queue<Integer> intQueue;
     private int num1;
     private int num2;
     private char operator;
