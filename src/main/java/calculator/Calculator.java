@@ -4,9 +4,20 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Calculator {
-    Queue<Integer> intQueue = new LinkedList<>();
+    private Queue<Integer> intQueue = new LinkedList<>();
+    private int num1;
+    private int num2;
+    private char operater;
 
-
+    public void setNum1 (int num1){
+        this.num1 = num1;
+    }
+    public void setNum2 (int num2){
+        this.num2 = num2;
+    }
+    public void setOperator (char operater) {
+        this.operater = operater;
+    }
     public int calculate(int num1, int num2, char operator) {
         int result = 0;
         if (operator == '+') {
@@ -31,6 +42,9 @@ public class Calculator {
         intQueue.add(result); // 결과값 Queue로 저장
         System.out.println("결과: " + result);
         return result;
+    }
+    public Queue<Integer> getter() {
+        return this.intQueue;
     }
 }
 
