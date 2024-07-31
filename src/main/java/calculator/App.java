@@ -36,7 +36,7 @@ public class App {
             String inquiry = sc.next();
             if (inquiry.equals("inquiry")) {
                 calculator.inquiryResult();
-                }
+            }
 
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");

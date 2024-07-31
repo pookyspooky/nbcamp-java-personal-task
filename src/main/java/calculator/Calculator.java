@@ -13,13 +13,15 @@ public class Calculator {
     private int num2;
     private char operator;
 
-    public void setNum1 (int num1){
+    public void setNum1(int num1) {
         this.num1 = num1;
     }
-    public void setNum2 (int num2){
+
+    public void setNum2(int num2) {
         this.num2 = num2;
     }
-    public void setOperator (char operator) {
+
+    public void setOperator(char operator) {
         this.operator = operator;
     }
 
@@ -48,14 +50,15 @@ public class Calculator {
         System.out.println("결과: " + result);
         return result;
     }
+
     public void removeResult() {
         this.intQueue.remove();
         System.out.println("가장 먼저 저장된 연산 결과가 삭제되었습니다.");
     }
+
     public void inquiryResult() {
-            for (int str : intQueue) {
-                System.out.println("저장값: " + str);
-            }
+        for (int str : intQueue) {
+            System.out.println("저장값: " + str);
+        }
     }
 }
-
